@@ -7,6 +7,7 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
   font-family: Arial, sans-serif;
 }
 
