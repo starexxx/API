@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced API Results</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <iframe id="apiIframe" src="" title="API Results" style="display: none;"></iframe>
+        <div class="button-container">
+            <button class="floating-button" id="popupButton" onclick="togglePopup()">+</button>
+            <button class="floating-button" id="fetchButton" onclick="loadResults()" style="display: none;">=</button>
+        </div>
+        <div class="popup" id="popup">
+            <h3>Enter Details</h3>
+            <textarea id="uidTextarea" placeholder="Enter UID" oninput="checkUIDValidity()"></textarea>
+            <select id="regionSelect" onchange="checkUIDValidity()">
+                <option value="" disabled selected>Select Region</option>
+                <option value="ind">India</option>
+                <option value="pk">Pakistan</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="cn">China</option>
+                <option value="jp">Japan</option>
+                <option value="fr">France</option>
+                <option value="de">Germany</option>
+                <option value="ru">Russia</option>
+                <option value="au">Australia</option>
+                <option value="ca">Canada</option>
+                <option value="br">Brazil</option>
+                <option value="za">South Africa</option>
+                <option value="kr">South Korea</option>
+                <option value="it">Italy</option>
+            </select>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
