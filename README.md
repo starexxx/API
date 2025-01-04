@@ -7,7 +7,7 @@ A simple, mobile-friendly project that dynamically displays API content or error
 ## Project Structure
 ```
 project/ 
-│ ├── index.html       # Main HTML file 
+│ ├── index.html     # Main HTML file 
 ├── styles.css       # CSS for styling 
 └── script.js        # JavaScript for functionality
 ```
