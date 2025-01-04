@@ -1,11 +1,20 @@
-const urlParams = new URLSearchParams(window.location.search);
-const uid = urlParams.get('uid');
-const region = urlParams.get('region');
+const query = window.location.search.substring(1);
+const [uid, region] = query.split('/');
+
+const iframe = document.getElementById('apiIframe');
+const errorOutput = document.getElementById('errorOutput');
 
 if (uid && region) {
-  const iframeSrc = `https://profile-sand-mu.vercel.app/api?uid=${uid}&region=${region}&key=Another`;
-  document.getElementById('apiIframe').src = iframeSrc;
-} else {
-  document.getElementById('apiIframe').style.display = 'none';
-  document.getElementById('errorMessage').style.display = 'block';
+  iframe.src = `https://profile-sand-mu.vercel.app/api?uid=${uid}&region=${region}&key=Another`;
+  iframe.style.display = 'block';
+} else 
+  
+  const errorResponse = {
+    error: "Invalid or missing parameters",
+    requiredFormat: "https://starexxx.github.io/API/?UID/Region",
+    example: "https://starexxx.github.io/API/?4411457393/ind"
+  };
+
+  errorOutput.textContent = JSON.stringify(errorResponse, null, 2);
+  errorOutput.style.display = 'block';
 }
