@@ -26,7 +26,7 @@ project/
 
 1. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-repo-name/project.git
+   git clone https://github.com/starexxx/API.git
    cd project
    ```
 
